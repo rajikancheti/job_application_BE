@@ -1,0 +1,488 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <title>Portfolio</title>
+    <style>
+/* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: cursive;
+  scroll-behavior: smooth;
+}
+
+nav{
+ background: #ffffff;
+ box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+ overflow: hidden;
+}
+nav .topnav{
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ height: 100%;
+ max-width: 90%;
+ background: #ffffff;
+ margin: auto;
+}
+nav .topnav a {
+  float: left;
+  display: block;
+  color: #285a2d;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+nav .topnav .logo {
+  color: #2B616D;
+  font-size: 2em;
+}
+.topnav a:hover {
+  background-color: #328538;
+  color: #B2DBD5;
+}
+
+.topnav a.active {
+  background-color: #2B616D;
+  color: #B2DBD5;
+}
+.topnav .icon {
+  display: none;
+}
+section{
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  color: #2B616D;
+  font-size: 5vmax;
+}
+
+.aboutClass{
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+}
+
+#aboutCard{
+  width: 90%;
+  height: 90%;
+  display: flex;
+  align-content: center;
+}
+#aboutImage{
+
+  flex:20%
+}
+#aboutDesc{
+  margin: auto;
+  line-height: 5vmax;
+  text-align: center;
+  font-size: xx-large;
+  color: #2B616D;
+  flex:50%
+}
+
+
+.educationClass{
+  display: flex;
+  flex-direction: row;
+  background: #E0E0E2;
+  font-size: 3vmax;
+  margin:1rem;
+}
+
+.educationTitle{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  margin: auto;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.educationDesc {
+  display: block;
+  font-size: 2rem;
+  position: absolute;
+  height: 0;
+  top: 0;
+  opacity: 0;
+  background-color: #a4f1a6;
+  color: white;
+  overflow:hidden;
+  transition: 0.8s ease;
+  margin: auto;
+  text-align: center;
+}
+
+
+.educationCard:hover .educationDesc {
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  overflow: visible;
+  margin: auto;
+  text-align: center;
+}
+
+
+.educationCard {
+  height: 50%;
+  font-size: 3vmin;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  text-align: center;
+  background-color: #B2DBD5;
+  margin: 1%;
+  flex:33%;
+  position:relative;
+}
+
+.educationCard:hover .educationDesc{
+  opacity: 1;
+}
+
+
+
+.Projects{
+  width: 100%;
+  height: 100%;
+}
+
+.projectClass{
+  flex-direction: row;
+  display: flex;
+  margin: auto;
+}
+
+.projectCard {
+  font-size: 3vmin;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  text-align: center;
+  background-color: #B2DBD5;
+  margin: 1em;
+  flex:25%
+
+}
+
+.projectCard:hover{
+  transform: scale(1.05);
+}
+
+.projectTitle {
+    background-color: #b6de58;
+    color: white;
+    padding: 40px 10px;
+    margin:auto;
+}
+
+.projectDesc {
+  text-align: center;
+  padding: 1em;
+}
+
+.Experiences{
+  background: #E0E0E2;
+  width: 100%;
+  height: 100%;
+}
+.experienceClass{
+  background: #E0E0E2;
+}
+
+.experienceCard {
+  margin: 1em;
+  background: #E0E0E2;
+}
+
+.experienceDesc {
+  font-size: 2vmax;
+  text-align: left;
+  margin: 1em;
+}
+
+.experienceTitle {
+  font-size: 5vmax;
+  text-align: start;
+  margin: 1em;
+}
+.Blog{
+  background: #F8F5F1;
+  padding: 5rem;
+  font-size: 5vmin;
+  color: #2B616D;
+  text-decoration: none;
+}
+.blogClass{
+  font-size: 5vmin;
+  color: #2B616D;
+  text-decoration: none;
+}
+
+footer {
+  height: 10%;
+  width: 100%;
+  text-align: right;
+  padding: 3px;
+  background-color: #2B616D;
+  color: #F8F5F1;
+}
+#footerIcons{
+  border-radius: 6px;
+  font-size:36px;
+  color:#F8F5F1;
+  right: 40px;
+}
+
+@media (max-width:500px){
+  .aboutClass {
+    flex-direction: column;
+
+  }
+  .aboutClass.aboutDesc{
+    line-height: 1vmax;
+    font-size: small;
+    display: table;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+    width:auto;
+    font-size:50%;
+
+  }
+}
+
+@media (max-width:500px){
+  .educationClass{
+    flex-direction: column;
+    font-size: 5vmin;
+    margin:1%;
+  }
+  .educationCard{
+    width:100%;
+  }
+}
+@media (max-width:500px){
+  .projectClass{
+    flex-direction: column;
+    margin: 1%;
+  }
+  .projectCard{
+    width:100%;
+  }
+}
+
+@media (max-width:500px){
+  .experienceDesc {
+    font-size: 3vmin;
+    
+  }
+}
+@media (max-width:500px){
+  .experienceTitle {
+    font-size: 5vmin;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .topnav a:not(:no-button) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+    </style>
+</head>
+<body>
+      <nav id ="myNav">
+        <header class="topnav">
+          <p class="logo" >Rajyalakshmi Kancheti<p>
+          <ul class="menu">
+            <a href="#About">About</a>
+            <a href="#Education">Education</a>
+            <a href="#Projects">Projects</a>
+            <a href="#Experiences">Experiences</a>
+            <a href="#Blog">Blog</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i></a>
+          </ul>
+        </header>
+      </nav>
+
+      <div>
+        <u><h2>About Me:</h2></u>
+        </div>
+
+    <div class="h400" id="Aboutme">
+        <div class="about">
+        <div class="abt">
+            <img src="https://th.bing.com/th/id/OIP.IjgK2iakWebdIdU6kvt13gHaHa?pid=ImgDet&rs=1">
+        </div>
+            <div class="abt1">
+                    <p>
+                        <h3>Mail : rkanc4@unh.newhaven.edu</h3>
+                        <h3>Location : West Haven, Connecticut</h3>
+                    </p>
+            </div>
+        </div>
+            <div class="about">
+                <p>
+                    My Name is Rajyalakshmi Kancheti.I have Completed my undergraduation the year 2020.Now Iam Pusuing My Masters in Computer Science at the University Of NewHaven.When I was doing my job after masters I got better position which needs better skills.So,I have decided to do masters.
+                </p>
+            </div>
+    </div>
+    <div>
+        <u><h2>Education:</h2></u>
+        </div>
+    <div id = "Education">
+    <div id = "edcucationCard1" class="educationCard">
+        <div class="content">
+          <div class="front">
+            Master's
+          </div>
+          <div class="back">
+            <p>GPA : 3.8</p>
+            <p>School : University of New Haven </p>
+            <p>Year : 2022-2023</p>
+          </div>
+        </div>
+      </div>
+      <div id = "educationCard2" class="educationCard">
+        <div class="content">
+          <div class="front">
+            Bachelor's 
+          </div>
+          <div class="back">
+            <p>CGPA : 8.7</p>
+            <p>School : Vignan University</p>
+            <p>Year : 2016-2020</p>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id = "educationCard3" class="educationCard">
+        <div class="content">
+          <div class="front">
+            XII 
+          </div>
+          <div class="back">
+            <p>Percentage : 95%</p>
+            <p>School : SriChaitanya Junior College</p>
+            <p>Year : 2014-2016</p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+        <u><h2>Projects:</h2></u>
+    </div>
+    <div id="Projects">
+        <div id = "projectCard1" class="projectCard" >
+
+          <div class="projectTitle">
+            <h1>Online Auction System</h1>
+           </div>
+          <div class="projectDesc">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Alias in minima corporis modi earum fuga iusto cum maxime quos autem amet, 
+              numquam tempora. Expedita consequuntur rerum, dolorem inventore delectus harum.
+            </p>
+          </div>
+        </div>
+        <div id = "projectCard2" class="projectCard">
+          <div class="projectTitle">
+            <h1>BigMart Sales Prediction</h1>
+           </div>
+          <div class="projectDesc">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Alias in minima corporis modi earum fuga iusto cum maxime quos autem amet, 
+              numquam tempora. Expedita consequuntur rerum, dolorem inventore delectus harum.
+            </p>
+          </div>
+        </div>  
+        </div>
+    </div>
+    <div>
+        <u><h2>Experiences:</h2></u>
+    </div>
+    <div class="h500" id="Experience">
+        <ul>
+            <li>
+                Company : Tata Consultancy Services Pvt Ltd
+            </li>
+            <li>
+                Domain : Analytics & Design
+            </li>
+            <li>
+                Technology : PlSql and Java
+            </li>
+            <li>
+                Location : Hyderabad
+            </li>
+            <li>
+                Duration : 1 year 5 months
+            </li>
+            <li>
+                Designantion :	Associate Engineer
+            </li>
+        </ul>
+    </div>
+    <div>
+    <h2><u>Blogs: </u></h2>
+    </div>
+    <div class="h500" id="Blogs">
+        No Blogs yet....!!!! If any will be represent here...!!!! Thank You!!!!
+    </div>
+    <div class="h500" id="Footer">
+        For more details please contact : 
+        <br> 
+        <br>
+        <div class="footer">
+            <i class="fa fa-phone">  +1-(203)-556-1432</i>
+            <i class="fa fa-envelope">  rkanc4@unh.newhaven.edu</i>    
+            <i class="fa fa-linkedin"><a href= "https://www.linkedin.com/in/raji-kancheti-9a5351191/" style="color: #06010e">  Linkedin</a></i>
+        </div>
+    </div>
+<script>
+  function myFunction() {
+    var x = document.getElementById("myNav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+  </script>
+</body>
+</html>
