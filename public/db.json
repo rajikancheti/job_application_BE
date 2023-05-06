@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "position": "Hiring Software Engineer at Apisero(an NTT Data Company)",
+            "requisitionId": "170423002940",
+            "companyName": "Apisero(an NTT Data Company)",
+            "jobType": "Permanent",
+            "location": "Temp. WFH - Kolkata",
+            "experience": "0-1 Yrs"
+        },
+        {
+            "position": "Mba Fresher",
+            "requisitionId": "170423006462",
+            "jobType": "Permanent",
+            "companyName": "Updater Services (UDS)",
+            "experience": "0-0 Yrs",
+            "location": "Hyderabad/Secunderabad, Pune, Bangalore/Bengaluru, Delhi / NCR, Mumbai (All Areas)"
+        },
+        {
+            "position": "Senior Frontend Software Engineer",
+            "requisitionId": "170423500474",
+            "jobType": "Permanent",
+            "companyName": "Browserstack",
+            "experience": "2-5 Yrs",
+            "location": "Kolkata, Mumbai, New Delhi, Hyderabad/Secunderabad, Pune, Chennai, Bangalore/Bengaluru"
+        }
+    ]
+}
