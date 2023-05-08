@@ -5,19 +5,7 @@ const { MongoClient } = require('mongodb');
 let responseData;
 let DB_NAME = "job_application";
 let COLLECTION_NAME = "jobs"
-async function main() {
-    const uri = `mongodb+srv://rajikancheti999:Saradhi9669@cluster0.keoy6xn.mongodb.net/job_application?retryWrites=true&w=majority`;
-    const client = new MongoClient(uri);
-    try {
-        await client.connect();
-        responseData = await getAllDataFromMongo(client)
-    } finally {
-        await client.close();
-    }
-}
-
-main().catch(console.error);
-
+const uri = `mongodb+srv://rajikancheti999:Saradhi9669@cluster0.keoy6xn.mongodb.net/job_application?retryWrites=true&w=majority`;
 const server = http.createServer(async (req, res) => {
     if (req.url === '/') {
         fs.readFile(path.join(__dirname, 'public', 'index.html'), (err, content) => {
@@ -27,8 +15,15 @@ const server = http.createServer(async (req, res) => {
         });
     } else if (req.url === '/api') {
         res.writeHead(200, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
+        const client = new MongoClient(uri);
+    try {
+        await client.connect();
+        responseData = await getAllDataFromMongo(client)
         res.end(JSON.stringify(responseData[0]))
 
+} finally {
+        await client.close();
+    }
     } else {
         res.writeHead(404, { 'Content-Type': 'text/html' });
         res.end(" <h1> 404 Nothing Found </h1>")

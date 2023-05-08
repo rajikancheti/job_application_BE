@@ -1,59 +1,57 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <title>Portfolio</title>
-    <style>
-/* Google Font CDN Link */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  font-family: cursive;
-  scroll-behavior: smooth;
+<html lang="en" >
+  <head>
+   <meta charset="UTF-8">
+   <title>Raji-Portfolio</title>
+  <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+      *{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+h2 {
+  color:rgb(41, 100, 59);
+  margin: 10px;
 }
-
 nav{
  background: #ffffff;
  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
  overflow: hidden;
+ margin: 10px;
+ width: 100%;
+ border: 3px solid rgb(67, 168, 161);
+
 }
 nav .topnav{
  display: flex;
  align-items: center;
  justify-content: space-between;
  height: 100%;
- max-width: 90%;
- background: #ffffff;
- margin: auto;
+ background: #b1e8b6;
+ margin: 10px;
 }
 nav .topnav a {
   float: left;
   display: block;
-  color: #285a2d;
+  color: #2b6d3c;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 20px;
 }
 nav .topnav .logo {
-  color: #2B616D;
-  font-size: 2em;
+  color: #3c752f;
+  font-size: 40px;
 }
 .topnav a:hover {
-  background-color: #328538;
+  background-color: #6ec661;
   color: #B2DBD5;
 }
 
 .topnav a.active {
-  background-color: #2B616D;
+  background-color: #2b6d44;
   color: #B2DBD5;
 }
 .topnav .icon {
@@ -61,72 +59,88 @@ nav .topnav .logo {
 }
 section{
   display: flex;
-  height: 100vh;
   width: 100%;
   align-items: center;
   justify-content: center;
-  color: #2B616D;
-  font-size: 5vmax;
+  color: #326836;
+  font-size: 20px;
+  margin:10px;
 }
 
 .aboutClass{
   padding: 1rem;
   display: flex;
   flex-direction: row;
+  background: #b1e8b6;
 }
 
 #aboutCard{
-  width: 90%;
-  height: 90%;
+  width: 100%;
+  height: auto;
   display: flex;
   align-content: center;
-}
-#aboutImage{
+  border: 3px solid rgb(67, 168, 161);
 
-  flex:20%
+}
+img{
+
+ padding: 50px;
+ height: 400px;
+ width: 400px;
+
 }
 #aboutDesc{
-  margin: auto;
-  line-height: 5vmax;
-  text-align: center;
-  font-size: xx-large;
-  color: #2B616D;
-  flex:50%
+    width: 100%;
+    height:auto;
+    margin: 25px;
+    line-height: 50px;
+    color: #1f512a;
+    display:inline-block;
+    padding:50px;
+    font-size: 30px;
 }
-
 
 .educationClass{
   display: flex;
   flex-direction: row;
-  background: #E0E0E2;
-  font-size: 3vmax;
-  margin:1rem;
+  background: #bdedc0;
+  font-size: 20px;
+  width: 100%;
+  height: 400px;
+  margin: 10px;
+  border: 3px solid rgb(67, 168, 161);
+
 }
 
 .educationTitle{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
+  display: grid;
   position: relative;
   margin: auto;
-  font-size: 2rem;
+  font-size: 20px;
   text-align: center;
+  color: #396b2f;
+  align-content: center;
 }
 
 .educationDesc {
-  display: block;
-  font-size: 2rem;
+  display: grid;
+  font-size: 20px;
   position: absolute;
   height: 0;
   top: 0;
   opacity: 0;
-  background-color: #a4f1a6;
-  color: white;
+  background-color: #f0f5f2;
+  color: rgb(41, 100, 59);
   overflow:hidden;
   transition: 0.8s ease;
-  margin: auto;
+  line-height: 20px;
   text-align: center;
+  align-content: center;
+
+
 }
 
 
@@ -142,20 +156,16 @@ section{
 
 .educationCard {
   height: 50%;
-  font-size: 3vmin;
+  font-size: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   text-align: center;
-  background-color: #B2DBD5;
+  background-color: #9fe19a;
   margin: 1%;
   flex:33%;
   position:relative;
+  border: 3px solid rgb(67, 168, 161);
+
 }
-
-.educationCard:hover .educationDesc{
-  opacity: 1;
-}
-
-
 
 .Projects{
   width: 100%;
@@ -166,24 +176,27 @@ section{
   flex-direction: row;
   display: flex;
   margin: auto;
+  background: #bdedc0;
+  margin:10px;
+  border: 3px solid rgb(67, 168, 161);
+
 }
 
 .projectCard {
-  font-size: 3vmin;
+  font-size: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   text-align: center;
-  background-color: #B2DBD5;
+  background-color: #9fe19a;
   margin: 1em;
-  flex:25%
+  flex:25%;
+  border: 3px solid rgb(67, 168, 161);
 
-}
 
-.projectCard:hover{
-  transform: scale(1.05);
+
 }
 
 .projectTitle {
-    background-color: #b6de58;
+    background-color: #316123;
     color: white;
     padding: 40px 10px;
     margin:auto;
@@ -195,119 +208,187 @@ section{
 }
 
 .Experiences{
-  background: #E0E0E2;
+  background: #bdedc0;
   width: 100%;
   height: 100%;
+  border: 3px solid rgb(67, 168, 161);
+
 }
 .experienceClass{
-  background: #E0E0E2;
+  background:#bdedc0;
+  border: 3px solid rgb(67, 168, 161);
+
 }
 
 .experienceCard {
-  margin: 1em;
   background: #E0E0E2;
+  color: #346d2b;
+  padding: 10px;
+  margin: 10px;
 }
 
 .experienceDesc {
-  font-size: 2vmax;
-  text-align: left;
-  margin: 1em;
+  font-size: 40px;
+  color: #346431;
 }
 
 .experienceTitle {
-  font-size: 5vmax;
-  text-align: start;
-  margin: 1em;
+  font-size: 20px;
 }
-.Blog{
-  background: #F8F5F1;
-  padding: 5rem;
-  font-size: 5vmin;
-  color: #2B616D;
+#Blog{
+  background-color: #a5bc8f;
+  padding: 5px;
+  font-size: 30px;
+  color: #346d2b;
   text-decoration: none;
+  border: 3px solid rgb(67, 168, 161);
+  margin: 10px;
+  height: 250px;
 }
 .blogClass{
-  font-size: 5vmin;
-  color: #2B616D;
+  font-size: 30px;
+  color:#346431;
   text-decoration: none;
 }
 
 footer {
-  height: 10%;
+  height: 50px;
   width: 100%;
-  text-align: right;
   padding: 3px;
-  background-color: #2B616D;
+  background-color: #307a3f;
   color: #F8F5F1;
+  text-align: center;
+  justify-content: space-around;
+  font-size: 30px;
+  margin: 10px;
+
 }
-#footerIcons{
+.footerIcons{
   border-radius: 6px;
-  font-size:36px;
   color:#F8F5F1;
-  right: 40px;
 }
 
-@media (max-width:500px){
+@media only screen and (max-width:500px) {
+
+
   .aboutClass {
-    flex-direction: column;
+    display: grid;
 
   }
-  .aboutClass.aboutDesc{
-    line-height: 1vmax;
-    font-size: small;
-    display: table;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    align-content: center;
-    width:auto;
-    font-size:50%;
+
+  #aboutCard {
+    display : grid;
+    width: 100%;
 
   }
-}
 
-@media (max-width:500px){
-  .educationClass{
-    flex-direction: column;
-    font-size: 5vmin;
-    margin:1%;
-  }
-  .educationCard{
-    width:100%;
-  }
-}
-@media (max-width:500px){
-  .projectClass{
-    flex-direction: column;
-    margin: 1%;
-  }
-  .projectCard{
-    width:100%;
-  }
-}
+  img {
 
-@media (max-width:500px){
+    height: 300px;
+    width : 300px;
+  }
+
+  #aboutDesc {
+    font-size : 20px;
+    width: auto;
+
+  }
+  
+
+  section{
+    display: grid;
+    height: auto;
+    width: 100%;
+  }
+
+  .educationClass {
+    display: grid;
+    height: 500px;
+    width: 100%;
+  }
+
+  .educationCard {
+    width: 350px;
+  }
+
+  .projectClass {
+    display: grid;
+    width: 100%;
+  }
+
   .experienceDesc {
-    font-size: 3vmin;
-    
+    height: auto;
+    font-size: 20px;
+    width: 100%;
   }
-}
-@media (max-width:500px){
-  .experienceTitle {
-    font-size: 5vmin;
+
+  .experienceClass {
+    width: 100%;
   }
+
+  #Blog{
+    height: auto;
+    font-size: 20px;
+    width: 100%;
+  }
+
+  footer{
+    display: grid;
+    height: auto;
+    width: 100%;
+  }
+
 }
 
+@media only screen and (max-width:600px) {
 
-@media (max-width: 500px) {
+
+  .aboutClass {
+    display: grid;
+
+  }
+
+  #aboutCard {
+    display : grid;
+    width: 100%;
+
+  }
+
+  img {
+
+    height: 300px;
+    width : 300px;
+  }
+
+  #aboutDesc {
+    font-size : 20px;
+    width: auto;
+
+  }
+
+}
+
+@media only screen and (max-width:300px) {
+  .educationClass {
+    display: grid;
+    height: 500px;
+    width: 100%;
+  }
+
+  .educationCard {
+    width: 250px;
+  }
+
+}
+
+@media only screen and (max-width: 500px) {
   .topnav a:not(:no-button) {display: none;}
   .topnav a.icon {
     float: right;
     display: block;
   }
-}
 
-@media (max-width: 500px) {
+
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
@@ -319,161 +400,137 @@ footer {
     display: block;
     text-align: left;
   }
+
 }
+     </style>
+   </head>
+<body >
+  <nav id ="myNav">
+    <header class="topnav">
+      <p class="logo" >Rajyalakshmi Kancheti<p>
+      <ul class="menu">
+        <a href="#About">About</a>
+        <a href="#Education">Education</a>
+        <a href="#Projects">Projects</a>
+        <a href="#Experiences">Experiences</a>
+        <a href="#Blog">Blogs</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i></a>
+      </ul>
+    </header>
+  </nav>
 
-    </style>
-</head>
-<body>
-      <nav id ="myNav">
-        <header class="topnav">
-          <p class="logo" >Rajyalakshmi Kancheti<p>
-          <ul class="menu">
-            <a href="#About">About</a>
-            <a href="#Education">Education</a>
-            <a href="#Projects">Projects</a>
-            <a href="#Experiences">Experiences</a>
-            <a href="#Blog">Blog</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i></a>
-          </ul>
-        </header>
-      </nav>
+  <main>
+    <h2>About Me: </h2>
 
-      <div>
-        <u><h2>About Me:</h2></u>
+    <section id="About">
+      <article  id="aboutCard" class="aboutClass">
+        <div id="aboutImage"> 
+          <img src="https://th.bing.com/th/id/OIP.IjgK2iakWebdIdU6kvt13gHaHa?pid=ImgDet&rs=1">
         </div>
+        <summary id="aboutDesc">
+          <p >
+            <h3>School : University of New Haven</h3>
+            <h3>Major : Computer Science</h3>
+            <h3>Location : West Haven, Connecticut</h3>
+        </p>
+    </summary>
+  </article>
+    </section>
 
-    <div class="h400" id="Aboutme">
-        <div class="about">
-        <div class="abt">
-            <img src="https://th.bing.com/th/id/OIP.IjgK2iakWebdIdU6kvt13gHaHa?pid=ImgDet&rs=1">
-        </div>
-            <div class="abt1">
-                    <p>
-                        <h3>Mail : rkanc4@unh.newhaven.edu</h3>
-                        <h3>Location : West Haven, Connecticut</h3>
-                    </p>
-            </div>
-        </div>
-            <div class="about">
-                <p>
-                    My Name is Rajyalakshmi Kancheti.I have Completed my undergraduation the year 2020.Now Iam Pusuing My Masters in Computer Science at the University Of NewHaven.When I was doing my job after masters I got better position which needs better skills.So,I have decided to do masters.
-                </p>
-            </div>
-    </div>
-    <div>
-        <u><h2>Education:</h2></u>
-        </div>
-    <div id = "Education">
-    <div id = "edcucationCard1" class="educationCard">
-        <div class="content">
-          <div class="front">
+    <h2>Education: </h2>
+
+    <section id="Education" class="educationClass">
+      <article id = "edcucationCard1" class="educationCard">
+          <h1 class="educationTitle">
             Master's
-          </div>
-          <div class="back">
-            <p>GPA : 3.8</p>
-            <p>School : University of New Haven </p>
-            <p>Year : 2022-2023</p>
-          </div>
-        </div>
-      </div>
-      <div id = "educationCard2" class="educationCard">
-        <div class="content">
-          <div class="front">
+          </h1>
+          <p class="educationDesc">
+            3.8/4<br>
+            University of New Haven<br> 
+            2022
+          </p>
+      </article>
+      <article id = "educationCard2" class="educationCard">
+          <h1 class="educationTitle">
             Bachelor's 
-          </div>
-          <div class="back">
-            <p>CGPA : 8.7</p>
-            <p>School : Vignan University</p>
-            <p>Year : 2016-2020</p>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div id = "educationCard3" class="educationCard">
-        <div class="content">
-          <div class="front">
+          </h1>
+          <p class="educationDesc">
+            8.9/10<br>
+            Vignan's University<br>
+            2016
+          </p>
+      </article>
+      <article id = "educationCard3" class="educationCard">
+          <h1 class="educationTitle">
             XII 
-          </div>
-          <div class="back">
-            <p>Percentage : 95%</p>
-            <p>School : SriChaitanya Junior College</p>
-            <p>Year : 2014-2016</p>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div>
-        <u><h2>Projects:</h2></u>
-    </div>
-    <div id="Projects">
-        <div id = "projectCard1" class="projectCard" >
+          </h1>
+          <p class="educationDesc">
+            8/10<br>
+            Sri Chaithanya<br>
+            2010
+          </p>
+      </article>
+    </section>
 
-          <div class="projectTitle">
-            <h1>Online Auction System</h1>
-           </div>
-          <div class="projectDesc">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Alias in minima corporis modi earum fuga iusto cum maxime quos autem amet, 
-              numquam tempora. Expedita consequuntur rerum, dolorem inventore delectus harum.
+    <h2>Projects: </h2>
+
+    <section id="Projects" class="projectClass">
+      <article id = "projectCard1" class="projectCard" >
+        <h1 class="projectTitle">Project-1</h1>
+        <summary class="projectDesc">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Alias in minima corporis modi earum fuga iusto cum maxime quos autem amet, 
+            numquam tempora. Expedita consequuntur rerum, dolorem inventore delectus harum.
+          </p>
+        </summary>
+      </article>
+      <article id = "projectCard2" class="projectCard">
+        <h1 class="projectTitle">Project-2</h1>
+        <summary class="projectDesc">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Alias in minima corporis modi earum fuga iusto cum maxime quos autem amet, 
+            numquam tempora. Expedita consequuntur rerum, dolorem inventore delectus harum.
+          </p>
+        </summary>
+      </article>
+    </section>
+
+    <h2>Experience: </h2>
+
+    <section id="Experiences" class="experienceClass">
+      <article class="experienceCard">
+          <h3 class="experienceTitle"></h3>
+          <summary class="experienceDesc">
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. </li>
+            <li> Alias in minima corporis modi earum fuga iusto cum maxime quos autem amet,</li>
+            <li> numquam tempora. Expedita consequuntur rerum, dolorem inventore delectus harum.</li>
+            <li> Lorem ipsum dolor sit amet consectetur adipisicing elit. </li>
+            <li>  Alias in minima corporis modi earum fuga iusto cum maxime quos autem amet, </li>
+            <li> numquam tempora. Expedita consequuntur rerum, dolorem inventore delectus harum.</li>
             </p>
-          </div>
-        </div>
-        <div id = "projectCard2" class="projectCard">
-          <div class="projectTitle">
-            <h1>BigMart Sales Prediction</h1>
-           </div>
-          <div class="projectDesc">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Alias in minima corporis modi earum fuga iusto cum maxime quos autem amet, 
-              numquam tempora. Expedita consequuntur rerum, dolorem inventore delectus harum.
-            </p>
-          </div>
-        </div>  
-        </div>
-    </div>
-    <div>
-        <u><h2>Experiences:</h2></u>
-    </div>
-    <div class="h500" id="Experience">
-        <ul>
-            <li>
-                Company : Tata Consultancy Services Pvt Ltd
-            </li>
-            <li>
-                Domain : Analytics & Design
-            </li>
-            <li>
-                Technology : PlSql and Java
-            </li>
-            <li>
-                Location : Hyderabad
-            </li>
-            <li>
-                Duration : 1 year 5 months
-            </li>
-            <li>
-                Designantion :	Associate Engineer
-            </li>
-        </ul>
-    </div>
-    <div>
-    <h2><u>Blogs: </u></h2>
-    </div>
-    <div class="h500" id="Blogs">
-        No Blogs yet....!!!! If any will be represent here...!!!! Thank You!!!!
-    </div>
-    <div class="h500" id="Footer">
-        For more details please contact : 
-        <br> 
-        <br>
-        <div class="footer">
-            <i class="fa fa-phone">  +1-(203)-556-1432</i>
-            <i class="fa fa-envelope">  rkanc4@unh.newhaven.edu</i>    
-            <i class="fa fa-linkedin"><a href= "https://www.linkedin.com/in/raji-kancheti-9a5351191/" style="color: #06010e">  Linkedin</a></i>
-        </div>
-    </div>
+          </summary>
+      </article>
+    </section>
+
+    <h2>Blogs: </h2>
+
+    <section id="Blog" >
+    <div class="blog">
+      No blogs yet...!!!! Links will be provided here if any.... Thank you...!!!!!
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div id="footerIcons" class="fa fa-phone" >&nbsp;&nbsp; +1 (475) 444 - 2588 &nbsp;&nbsp; &nbsp;&nbsp; </div>
+    <div id="footerIcons"class="fa fa-envelope" >&nbsp;&nbsp;rkanc4@unh.newhaven.edu&nbsp;&nbsp;&nbsp;&nbsp;</div>
+    <div id="footerIcons" class="fa fa-linkedin" >&nbsp;&nbsp;</div>
+  </footer>
+
+</body>
+
 <script>
   function myFunction() {
     var x = document.getElementById("myNav");
@@ -484,5 +541,5 @@ footer {
     }
   }
   </script>
-</body>
+
 </html>
