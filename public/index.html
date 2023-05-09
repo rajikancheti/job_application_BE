@@ -7,32 +7,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <style>
-      *{
+<style>
+  *, html, body{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 h2 {
   color:rgb(41, 100, 59);
-  margin: 10px;
+  padding: 10px;
 }
 nav{
  background: #ffffff;
  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
  overflow: hidden;
- margin: 10px;
  width: 100%;
  border: 3px solid rgb(67, 168, 161);
 
 }
-nav .topnav{
+.main-container{
+  padding: 10px;
+}
+.topnav{
  display: flex;
  align-items: center;
  justify-content: space-between;
  height: 100%;
+ width: 100%;
  background: #b1e8b6;
- margin: 10px;
+ flex-wrap: wrap;
+ padding: 20px 2px;
 }
-nav .topnav a {
+.topnav a {
   float: left;
   display: block;
   color: #2b6d3c;
@@ -41,7 +48,7 @@ nav .topnav a {
   text-decoration: none;
   font-size: 20px;
 }
-nav .topnav .logo {
+.topnav .logo {
   color: #3c752f;
   font-size: 40px;
 }
@@ -63,8 +70,7 @@ section{
   align-items: center;
   justify-content: center;
   color: #326836;
-  font-size: 20px;
-  margin:10px;
+  font-size: 20px;;
 }
 
 .aboutClass{
@@ -92,7 +98,6 @@ img{
 #aboutDesc{
     width: 100%;
     height:auto;
-    margin: 25px;
     line-height: 50px;
     color: #1f512a;
     display:inline-block;
@@ -107,7 +112,6 @@ img{
   font-size: 20px;
   width: 100%;
   height: 400px;
-  margin: 10px;
   border: 3px solid rgb(67, 168, 161);
 
 }
@@ -160,7 +164,6 @@ img{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   text-align: center;
   background-color: #9fe19a;
-  margin: 1%;
   flex:33%;
   position:relative;
   border: 3px solid rgb(67, 168, 161);
@@ -177,7 +180,6 @@ img{
   display: flex;
   margin: auto;
   background: #bdedc0;
-  margin:10px;
   border: 3px solid rgb(67, 168, 161);
 
 }
@@ -187,7 +189,6 @@ img{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   text-align: center;
   background-color: #9fe19a;
-  margin: 1em;
   flex:25%;
   border: 3px solid rgb(67, 168, 161);
 
@@ -224,7 +225,6 @@ img{
   background: #E0E0E2;
   color: #346d2b;
   padding: 10px;
-  margin: 10px;
 }
 
 .experienceDesc {
@@ -242,7 +242,6 @@ img{
   color: #346d2b;
   text-decoration: none;
   border: 3px solid rgb(67, 168, 161);
-  margin: 10px;
   height: 250px;
 }
 .blogClass{
@@ -252,7 +251,7 @@ img{
 }
 
 footer {
-  height: 50px;
+  /* height: 50px; */
   width: 100%;
   padding: 3px;
   background-color: #307a3f;
@@ -260,14 +259,16 @@ footer {
   text-align: center;
   justify-content: space-around;
   font-size: 30px;
-  margin: 10px;
-
 }
 .footerIcons{
   border-radius: 6px;
   color:#F8F5F1;
 }
-
+@media only screen and (max-width: 850px) {
+  #aboutCard{
+    flex-direction: column;
+  }
+}
 @media only screen and (max-width:500px) {
 
 
@@ -330,12 +331,17 @@ footer {
     height: auto;
     font-size: 20px;
     width: 100%;
+    margin: 10px 0;
   }
 
   footer{
     display: grid;
     height: auto;
     width: 100%;
+    font-size: 16px;
+  }
+  .topnav .logo{
+    font-size: 35px;
   }
 
 }
@@ -389,7 +395,11 @@ footer {
   }
 
 
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -405,130 +415,131 @@ footer {
      </style>
    </head>
 <body >
-  <nav id ="myNav">
-    <header class="topnav">
-      <p class="logo" >Rajyalakshmi Kancheti<p>
-      <ul class="menu">
-        <a href="#About">About</a>
-        <a href="#Education">Education</a>
-        <a href="#Projects">Projects</a>
-        <a href="#Experiences">Experiences</a>
-        <a href="#Blog">Blogs</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i></a>
-      </ul>
-    </header>
-  </nav>
-
-  <main>
-    <h2>About Me: </h2>
-
-    <section id="About">
-      <article  id="aboutCard" class="aboutClass">
-        <div id="aboutImage"> 
-          <img src="https://th.bing.com/th/id/OIP.IjgK2iakWebdIdU6kvt13gHaHa?pid=ImgDet&rs=1">
-        </div>
-        <summary id="aboutDesc">
-          <p >
-            <h3>School : University of New Haven</h3>
-            <h3>Major : Computer Science</h3>
-            <h3>Location : West Haven, Connecticut</h3>
-        </p>
-    </summary>
-  </article>
-    </section>
-
-    <h2>Education: </h2>
-
-    <section id="Education" class="educationClass">
-      <article id = "edcucationCard1" class="educationCard">
-          <h1 class="educationTitle">
-            Master's
-          </h1>
-          <p class="educationDesc">
-            3.8/4<br>
-            University of New Haven<br> 
-            2022
+  <div class="main-container">
+    <nav id ="myNav" class="topnav">
+      <!-- <header class="topnav"> -->
+        <p class="logo" >Rajyalakshmi Kancheti</p>
+        <!-- <ul class="menu"> -->
+          <a href="#About">About</a>
+          <a href="#Education">Education</a>
+          <a href="#Projects">Projects</a>
+          <a href="#Experiences">Experiences</a>
+          <a href="#Blog">Blogs</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i></a>
+        <!-- </ul> -->
+      <!-- </header> -->
+    </nav>
+  
+    <main>
+      <h2>About Me: </h2>
+  
+      <section id="About">
+        <article  id="aboutCard" class="aboutClass">
+          <div id="aboutImage"> 
+            <img src="https://th.bing.com/th/id/OIP.IjgK2iakWebdIdU6kvt13gHaHa?pid=ImgDet&rs=1">
+          </div>
+          <summary id="aboutDesc">
+            <p >
+              <h3>School : University of New Haven</h3>
+              <h3>Major : Computer Science</h3>
+              <h3>Location : West Haven, Connecticut</h3>
           </p>
-      </article>
-      <article id = "educationCard2" class="educationCard">
-          <h1 class="educationTitle">
-            Bachelor's 
-          </h1>
-          <p class="educationDesc">
-            8.9/10<br>
-            Vignan's University<br>
-            2016
-          </p>
-      </article>
-      <article id = "educationCard3" class="educationCard">
-          <h1 class="educationTitle">
-            XII 
-          </h1>
-          <p class="educationDesc">
-            8/10<br>
-            Sri Chaithanya<br>
-            2010
-          </p>
-      </article>
-    </section>
-
-    <h2>Projects: </h2>
-
-    <section id="Projects" class="projectClass">
-      <article id = "projectCard1" class="projectCard" >
-        <h1 class="projectTitle">Project-1</h1>
-        <summary class="projectDesc">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Alias in minima corporis modi earum fuga iusto cum maxime quos autem amet, 
-            numquam tempora. Expedita consequuntur rerum, dolorem inventore delectus harum.
-          </p>
-        </summary>
-      </article>
-      <article id = "projectCard2" class="projectCard">
-        <h1 class="projectTitle">Project-2</h1>
-        <summary class="projectDesc">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Alias in minima corporis modi earum fuga iusto cum maxime quos autem amet, 
-            numquam tempora. Expedita consequuntur rerum, dolorem inventore delectus harum.
-          </p>
-        </summary>
-      </article>
-    </section>
-
-    <h2>Experience: </h2>
-
-    <section id="Experiences" class="experienceClass">
-      <article class="experienceCard">
-          <h3 class="experienceTitle"></h3>
-          <summary class="experienceDesc">
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. </li>
-            <li> Alias in minima corporis modi earum fuga iusto cum maxime quos autem amet,</li>
-            <li> numquam tempora. Expedita consequuntur rerum, dolorem inventore delectus harum.</li>
-            <li> Lorem ipsum dolor sit amet consectetur adipisicing elit. </li>
-            <li>  Alias in minima corporis modi earum fuga iusto cum maxime quos autem amet, </li>
-            <li> numquam tempora. Expedita consequuntur rerum, dolorem inventore delectus harum.</li>
+      </summary>
+    </article>
+      </section>
+  
+      <h2>Education: </h2>
+  
+      <section id="Education" class="educationClass">
+        <article id = "edcucationCard1" class="educationCard">
+            <h1 class="educationTitle">
+              Master's
+            </h1>
+            <p class="educationDesc">
+              3.8/4<br>
+              University of New Haven<br> 
+              2022
+            </p>
+        </article>
+        <article id = "educationCard2" class="educationCard">
+            <h1 class="educationTitle">
+              Bachelor's 
+            </h1>
+            <p class="educationDesc">
+              8.9/10<br>
+              Vignan's University<br>
+              2016
+            </p>
+        </article>
+        <article id = "educationCard3" class="educationCard">
+            <h1 class="educationTitle">
+              XII 
+            </h1>
+            <p class="educationDesc">
+              8/10<br>
+              Sri Chaithanya<br>
+              2010
+            </p>
+        </article>
+      </section>
+  
+      <h2>Projects: </h2>
+  
+      <section id="Projects" class="projectClass">
+        <article id = "projectCard1" class="projectCard" >
+          <h1 class="projectTitle">Project-1</h1>
+          <summary class="projectDesc">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Alias in minima corporis modi earum fuga iusto cum maxime quos autem amet, 
+              numquam tempora. Expedita consequuntur rerum, dolorem inventore delectus harum.
             </p>
           </summary>
-      </article>
-    </section>
-
-    <h2>Blogs: </h2>
-
-    <section id="Blog" >
-    <div class="blog">
-      No blogs yet...!!!! Links will be provided here if any.... Thank you...!!!!!
-      </div>
-    </section>
-
-  </main>
-
-  <footer>
-    <div id="footerIcons" class="fa fa-phone" >&nbsp;&nbsp; +1 (475) 444 - 2588 &nbsp;&nbsp; &nbsp;&nbsp; </div>
-    <div id="footerIcons"class="fa fa-envelope" >&nbsp;&nbsp;rkanc4@unh.newhaven.edu&nbsp;&nbsp;&nbsp;&nbsp;</div>
-    <div id="footerIcons" class="fa fa-linkedin" >&nbsp;&nbsp;</div>
-  </footer>
-
+        </article>
+        <article id = "projectCard2" class="projectCard">
+          <h1 class="projectTitle">Project-2</h1>
+          <summary class="projectDesc">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+              Alias in minima corporis modi earum fuga iusto cum maxime quos autem amet, 
+              numquam tempora. Expedita consequuntur rerum, dolorem inventore delectus harum.
+            </p>
+          </summary>
+        </article>
+      </section>
+  
+      <h2>Experience: </h2>
+  
+      <section id="Experiences" class="experienceClass">
+        <article class="experienceCard">
+            <h3 class="experienceTitle"></h3>
+            <summary class="experienceDesc">
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. </li>
+              <li> Alias in minima corporis modi earum fuga iusto cum maxime quos autem amet,</li>
+              <li> numquam tempora. Expedita consequuntur rerum, dolorem inventore delectus harum.</li>
+              <li> Lorem ipsum dolor sit amet consectetur adipisicing elit. </li>
+              <li>  Alias in minima corporis modi earum fuga iusto cum maxime quos autem amet, </li>
+              <li> numquam tempora. Expedita consequuntur rerum, dolorem inventore delectus harum.</li>
+              </p>
+            </summary>
+        </article>
+      </section>
+  
+      <h2>Blogs: </h2>
+  
+      <section id="Blog" >
+      <div class="blog">
+        No blogs yet...!!!! Links will be provided here if any.... Thank you...!!!!!
+        </div>
+      </section>
+  
+    </main>
+  
+    <footer>
+      <div id="footerIcons" class="fa fa-phone" >&nbsp;&nbsp; +1 (475) 444 - 2588 &nbsp;&nbsp; &nbsp;&nbsp; </div>
+      <div id="footerIcons"class="fa fa-envelope" >&nbsp;&nbsp;rkanc4@unh.newhaven.edu&nbsp;&nbsp;&nbsp;&nbsp;</div>
+      <div id="footerIcons" class="fa fa-linkedin" >&nbsp;&nbsp;</div>
+    </footer>
+  </div>
 </body>
 
 <script>
